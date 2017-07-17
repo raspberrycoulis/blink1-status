@@ -17,3 +17,6 @@ Update udev rules so you don't need to run as `sudo` every time:
     $ sudo udevadm control --reload-rules
 
 Unplug the blink(1) and put it back in to complete the process.
+
+## Select the service you want to check up on
+Simply change the `/bin/systemctl is-active XXXXXXX.service` to the running service you want to check the status of.

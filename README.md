@@ -20,3 +20,14 @@ Unplug the blink(1) and put it back in to complete the process.
 
 ## Select the service you want to check up on
 Simply change the `/bin/systemctl is-active XXXXXXX.service` to the running service you want to check the status of.
+
+## Run as a cronjob
+To run this script, simple setup a cronjob as follows:
+````
+sudo crontab -e
+````
+Then add the following to the bottom to run every hour, on the hour:
+````
+0 */1 * * *  /home/pi/blink1-status/blink1-status.sh >/dev/null 2>&1
+````
+Save `CTRL+X` and save `Y` to install the cronjob.

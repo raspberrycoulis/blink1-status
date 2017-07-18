@@ -18,8 +18,17 @@ Update udev rules so you don't need to run as `sudo` every time:
 
 Unplug the blink(1) and put it back in to complete the process.
 
+## Clone this repository
+You'll need this script, so clone the repository on your device:
+````
+git clone git@github.com:raspberrycoulis/blink1-status.git
+````
+
 ## Select the service you want to check up on
-Simply change the `/bin/systemctl is-active XXXXXXX.service` to the running service you want to check the status of.
+Simply change the `/bin/systemctl is-active XXXXXXX.service` to the running service you want to check the status of:
+````
+nano /home/pi/blink1-status/blink1-status.sh
+````
 
 ## Run as a cronjob
 To run this script, simple setup a cronjob as follows:
